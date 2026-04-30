@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:mysql:///big_event
+    username: root
+    password: chen@341225
+    driver-class-name: com.mysql.cj.jdbc.Driver
