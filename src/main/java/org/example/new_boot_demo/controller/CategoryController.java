@@ -18,7 +18,7 @@ public class CategoryController {
 
     @PostMapping
     public Result add(@RequestBody @Validated(Category.Add.class) Category category) {
-
+        // 添加文章分类
         categoryService.add(category);
         return Result.success();
     }
