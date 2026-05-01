@@ -5,7 +5,11 @@ import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.Claim;
 import com.auth0.jwt.interfaces.DecodedJWT;
+import org.example.new_boot_demo.mapper.UserMapper;
+import org.example.new_boot_demo.service.UserService;
+import org.example.new_boot_demo.utils.Md5Util;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -40,5 +44,11 @@ public class JwtTest {
 
         System.out.println(claims.get("user"));
 
+    }
+
+
+    @Test
+    public void test1(){
+        System.out.println(Md5Util.getMD5String("123456"));
     }
 }

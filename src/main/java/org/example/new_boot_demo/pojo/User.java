@@ -16,6 +16,8 @@ public class User {
     private String username;//用户名
 
     @JsonIgnore // 让 springmvc 把当前对象转换成 JSON 字符串时忽略 password， 最终的 JSON 字符串中就会没有 password 属性了
+//    @Pattern(regexp = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{5,16}$") // 5-16位，含大小写字母、数字、特殊字符
+//    @Pattern(regexp = "^[A-Za-z0-9]{5,16}$")   // 5-16 位 A~Z， a~z，0~9
     private String password;//密码
 
     @NotEmpty

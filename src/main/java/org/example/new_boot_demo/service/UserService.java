@@ -12,4 +12,10 @@ public interface UserService {
 
     // 更新
     void update(User user);
+
+    // 更新头像
+    void updateAvatar(String avatarUrl);
+
+    // 更新密码
+    void updatePwd(String newPwd);
 }
