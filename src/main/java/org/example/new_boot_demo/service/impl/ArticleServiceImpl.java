@@ -44,12 +44,15 @@ public class ArticleServiceImpl implements ArticleService {
         Map<String, Object> map = ThreadLocalUtil.get();
         Integer id = (Integer) map.get("id");
         List<Article> as = articleMapper.list(id, categoryId, state);
+        System.out.println(as);
         // page 中提供了方法， 可以获取 PageHelper 分页查询后，得到的总记录条数和当前页数据
         Page<Article> page = (Page<Article>) as;
 
         // 把数据填充到 PageBean 对象中
         pageBean.setTotal(page.getTotal());
         pageBean.setItems(page.getResult());
+
+        System.out.println(pageBean);
 
         return pageBean;
     }
